@@ -99,10 +99,9 @@ const DesktopNav = () => {
         const active = router.asPath === navItem.href ? true : false;
 
         return (
-          <Box key={navItem.label}>
+          <Stack key={navItem.label} w={'fit-contents'} spacing={0}>
             <NextLink href={navItem.href ?? '#'} passHref>
               <Link
-                p={2}
                 fontSize={'lg'}
                 fontWeight={500}
                 color={linkColor}
@@ -119,10 +118,9 @@ const DesktopNav = () => {
               rounded={'full'}
               h={'2px'}
               bg={linkUnderlineColor}
-              w={'40%'}
-              ml={2}
+              w={'50%'}
             />
-          </Box>
+          </Stack>
         );
       })}
     </Stack>
