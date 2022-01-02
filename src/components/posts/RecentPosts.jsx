@@ -12,7 +12,6 @@ import NextLink from 'next/link';
 
 export default function RecentPosts({ posts }) {
   const titleColor = useColorModeValue('gray.800', 'brand.400');
-  const exceptColor = useColorModeValue('gray.500', 'gray.400');
   const dateColor = useColorModeValue('brand.500', 'gray.200');
 
   return (
@@ -46,9 +45,6 @@ export default function RecentPosts({ posts }) {
                 {post.title}
               </Link>
             </NextLink>
-            <Text py={2} fontSize={'lg'} color={exceptColor}>
-              {post.excerpt}
-            </Text>
             <Stack direction={'row'}>
               <Text color={dateColor} fontWeight={500}>
                 {post.dateFormatted}
