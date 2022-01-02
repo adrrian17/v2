@@ -39,7 +39,13 @@ export default function Navbar() {
         >
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <FiX w={3} h={3} /> : <FiMenu w={5} h={5} />}
+            icon={
+              isOpen ? (
+                <FiX w={3} h={3} size={24} />
+              ) : (
+                <FiMenu w={5} h={5} size={24} />
+              )
+            }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
           />
@@ -68,7 +74,7 @@ export default function Navbar() {
 
         <Flex flex={{ base: 1, md: 0 }} justify={'flex-end'}>
           <Button variant={'ghost'} ml={6} onClick={toggleColorMode}>
-            {colorMode === 'light' ? <FiMoon /> : <FiSun />}
+            {colorMode === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
           </Button>
         </Flex>
       </Flex>
