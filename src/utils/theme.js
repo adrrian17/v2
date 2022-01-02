@@ -1,6 +1,9 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
+  fonts: {
+    body: 'Work Sans',
+  },
   colors: {
     brand: {
       50: '#e2eeff',
