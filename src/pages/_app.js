@@ -1,4 +1,5 @@
 import '~/styles/fonts.css';
+import '~/styles/post.css';
 
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';

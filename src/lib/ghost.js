@@ -7,11 +7,21 @@ const api = new GhostContentAPI({
   version: 'v3',
 });
 
-export async function getRecentPosts() {
+export async function getPosts(limit = 5) {
   return await api.posts
     .browse({
-      limit: '3',
+      limit,
       order: 'published_at DESC',
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
+export async function getSinglePost(slug) {
+  return await api.posts
+    .read({
+      slug,
     })
     .catch((err) => {
       console.error(err);
