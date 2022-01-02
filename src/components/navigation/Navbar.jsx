@@ -171,8 +171,8 @@ const NAV_ITEMS = [
     href: '/',
   },
   {
-    label: 'Blog',
-    href: '/blog',
+    label: 'Archivo',
+    href: '/archivo',
   },
   {
     label: 'Proyectos',

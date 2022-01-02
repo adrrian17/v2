@@ -11,7 +11,6 @@ export async function getPosts(limit = 6) {
   return await api.posts
     .browse({
       limit,
-      order: 'published_at DESC',
     })
     .catch((err) => {
       console.error(err);
