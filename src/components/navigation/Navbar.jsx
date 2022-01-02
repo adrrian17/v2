@@ -28,8 +28,8 @@ export default function Navbar() {
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={2}
+        px={4}
         align={'center'}
       >
         <Flex
@@ -53,10 +53,10 @@ export default function Navbar() {
           <NextLink href="/" passHref>
             <Link _hover={{ textDecoration: 'none' }} _focus={{ ring: 0 }}>
               <Text
-                p={3}
-                fontSize={{ base: 'sm', md: '2xl' }}
+                fontFamily={'Billion Dreams'}
+                fontSize={{ base: '2xl', md: '5xl' }}
                 textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-                color={useColorModeValue('brand.500', 'white')}
+                color={useColorModeValue('gray.800', 'white')}
               >
                 Adrian Sin Acento
               </Text>
@@ -85,7 +85,6 @@ export default function Navbar() {
 const DesktopNav = () => {
   const router = useRouter();
 
-  const activeLinkColor = useColorModeValue('brand.500', 'gray.200');
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('brand.500', 'white');
   const linkUnderlineColor = useColorModeValue('brand.500', 'white');
@@ -102,7 +101,7 @@ const DesktopNav = () => {
                 p={2}
                 fontSize={'lg'}
                 fontWeight={500}
-                color={active ? activeLinkColor : linkColor}
+                color={linkColor}
                 _hover={{
                   textDecoration: 'none',
                   color: linkHoverColor,
