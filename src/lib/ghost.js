@@ -7,7 +7,7 @@ const api = new GhostContentAPI({
   version: 'v3',
 });
 
-export async function getPosts(limit = 5) {
+export async function getPosts(limit = 6) {
   return await api.posts
     .browse({
       limit,
