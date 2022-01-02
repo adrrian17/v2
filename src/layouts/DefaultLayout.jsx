@@ -1,10 +1,11 @@
+import { Container } from '@chakra-ui/react';
 import Navbar from '~/components/navigation/Navbar';
 
 export default function DefaultLayout({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <Container maxW={'container.lg'}>{children}</Container>
     </>
   );
 }
