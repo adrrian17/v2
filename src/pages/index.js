@@ -4,7 +4,7 @@ import DefaultLayout from '~/layouts/DefaultLayout';
 import Intro from '~/components/general/Intro';
 import RecentPosts from '~/components/posts/RecentPosts';
 
-import { getRecentPosts } from 'lib/ghost';
+import { getRecentPosts } from '~/lib/ghost';
 
 export async function getStaticProps() {
   const posts = await getRecentPosts();
