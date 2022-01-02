@@ -13,7 +13,7 @@ import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 export default function Intro() {
   return (
     <Stack
-      px={{ base: 4, md: 0 }}
+      px={{ base: 4, lg: 0 }}
       py={{ base: 12, md: 20 }}
       align={'center'}
       direction={{ base: 'column', md: 'row' }}
@@ -33,7 +33,12 @@ export default function Intro() {
           />
         </Box>
       </Flex>
-      <Stack flex={1} direction={'column'} pt={{ base: 12, md: 0 }}>
+      <Stack
+        flex={2}
+        direction={'column'}
+        pl={{ base: 0, md: 12 }}
+        pt={{ base: 12, md: 0 }}
+      >
         <Stack direction={'row'}>
           <Text
             color={useColorModeValue('gray.800', 'white')}
