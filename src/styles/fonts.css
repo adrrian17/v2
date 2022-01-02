@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Billion Dreams';
+  src: url('../public/fonts/BillionDreams.eot');
+  src: url('../public/fonts/BillionDreams.eot?#iefix') format('embedded-opentype'),
+       url('../public/fonts/BillionDreams.woff2') format('woff2'),
+       url('../public/fonts/BillionDreams.woff') format('woff'),
+       url('../public/fonts/BillionDreams.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
