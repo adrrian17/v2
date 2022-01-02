@@ -28,7 +28,7 @@ export default function Blog({ posts }) {
             <Text
               fontFamily={'Work Sans'}
               fontWeight={700}
-              fontSize={'xl'}
+              fontSize={'2xl'}
               className="post-label"
               mt={12}
               color={'brand.500'}
@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
               {monthAndYear(post.published_at)}
             </Text>
             <Stack direction={'row'} align={'center'}>
-              <Text fontWeight={500} color={'brand.500'}>
+              <Text fontSize={'sm'} fontWeight={500} color={'brand.500'}>
                 {dateFormatted(post.published_at)}
               </Text>
               <NextLink href={`/${post.slug}`} passHref>
