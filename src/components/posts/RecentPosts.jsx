@@ -2,11 +2,13 @@ import {
   Box,
   Container,
   Heading,
+  Link,
   Stack,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import Link from 'next/link';
+
+import NextLink from 'next/link';
 
 export default function RecentPosts({ posts }) {
   const titleColor = useColorModeValue('gray.800', 'brand.400');
@@ -34,16 +36,16 @@ export default function RecentPosts({ posts }) {
 
         return (
           <Stack key={post.id} my={12}>
-            <Link href={`/${post.slug}`} passHref>
-              <Text
+            <NextLink href={`/${post.slug}`} passHref>
+              <Link
                 fontSize={'xl'}
                 fontWeight={700}
                 color={titleColor}
                 cursor={'pointer'}
               >
                 {post.title}
-              </Text>
-            </Link>
+              </Link>
+            </NextLink>
             <Text py={2} fontSize={'lg'} color={exceptColor}>
               {post.excerpt}
             </Text>
