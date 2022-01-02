@@ -78,7 +78,7 @@ export default function Intro() {
             _hover={{ color: 'brand.500' }}
             href="mailto:adrian.ayala17@gmail.com"
           >
-            <FiMail size={20} />
+            <FiMail size={24} />
           </Link>
         </Stack>
       </Stack>
