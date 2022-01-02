@@ -62,7 +62,7 @@ export default function Navbar() {
                 textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                 color={useColorModeValue('gray.800', 'white')}
               >
-                Adrian Sin Acento
+                Sin Acento
               </Text>
             </Link>
           </NextLink>
