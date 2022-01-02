@@ -94,7 +94,7 @@ const DesktopNav = () => {
   const linkUnderlineColor = useColorModeValue('brand.500', 'white');
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={10}>
       {NAV_ITEMS.map((navItem) => {
         const active = router.asPath === navItem.href ? true : false;
 
