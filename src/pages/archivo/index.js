@@ -1,18 +1,11 @@
-import {
-  Container,
-  Divider,
-  Heading,
-  Link,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Container, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import DefaultLayout from '~/layouts/DefaultLayout';
 import NextLink from 'next/link';
 
 import { getPosts } from '~/lib/ghost';
 import { dateFormatted, monthAndYear, numericMonth } from '~/utils/dateParser';
 
-export default function Blog({ posts }) {
+export default function Archivo({ posts }) {
   return (
     <Container maxW={'container.sm'} my={20}>
       <Heading fontFamily={'Work Sans'} textAlign={'center'} mb={6}>
@@ -57,7 +50,7 @@ export default function Blog({ posts }) {
   );
 }
 
-Blog.Layout = DefaultLayout;
+Archivo.Layout = DefaultLayout;
 
 export async function getStaticProps() {
   const posts = await getPosts('all');
