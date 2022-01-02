@@ -13,3 +13,8 @@
   font-size: 1.125rem;
   line-height: 1.65;
  }
+
+ .post a {
+  color: #094cdc;
+  text-decoration: underline #094cdc;
+ }
