@@ -6,6 +6,7 @@
 }
 
 .post blockquote {
+  font-style: italic;
   border-left: 4px solid #094cdc;
   padding-left: 1rem;
   margin-top: 1rem;
