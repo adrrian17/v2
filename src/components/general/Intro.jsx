@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import { FiGithub, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 export default function Intro() {
   return (
@@ -48,7 +48,7 @@ export default function Intro() {
           color={useColorModeValue('gray.500', 'gray.400')}
           fontSize={{ base: 'xl' }}
         >
-          Barista y co-fundador de{' '}
+          Soy barista y co-fundador de{' '}
           <Link
             textDecorationLine={'underline'}
             color={useColorModeValue('brand.500', 'brand.400')}
@@ -73,6 +73,12 @@ export default function Intro() {
             isExternal
           >
             <FiGithub size={24} />
+          </Link>
+          <Link
+            _hover={{ color: 'brand.500' }}
+            href="mailto:adrian.ayala17@gmail.com"
+          >
+            <FiMail size={20} />
           </Link>
         </Stack>
       </Stack>
