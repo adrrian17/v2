@@ -4,6 +4,15 @@ const theme = extendTheme({
   fonts: {
     body: 'Work Sans',
   },
+  components: {
+    Link: {
+      baseStyle: {
+        _focus: {
+          ring: 0,
+        },
+      },
+    },
+  },
   colors: {
     brand: {
       50: '#e2eeff',
