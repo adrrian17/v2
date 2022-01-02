@@ -13,6 +13,7 @@ import { FiGithub, FiTwitter } from 'react-icons/fi';
 export default function Intro() {
   return (
     <Stack
+      px={{ base: 4, md: 0 }}
       py={{ base: 12, md: 20 }}
       align={'center'}
       direction={{ base: 'column', md: 'row' }}
