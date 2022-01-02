@@ -13,7 +13,7 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -39,9 +39,7 @@ export default function Navbar() {
         >
           <IconButton
             onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
+            icon={isOpen ? <FiX w={3} h={3} /> : <FiMenu w={5} h={5} />}
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
           />
@@ -70,7 +68,7 @@ export default function Navbar() {
 
         <Flex flex={{ base: 1, md: 0 }} justify={'flex-end'}>
           <Button variant={'ghost'} ml={6} onClick={toggleColorMode}>
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            {colorMode === 'light' ? <FiMoon /> : <FiSun />}
           </Button>
         </Flex>
       </Flex>
