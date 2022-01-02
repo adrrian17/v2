@@ -119,7 +119,7 @@ const DesktopNav = () => {
               rounded={'full'}
               h={'2px'}
               bg={linkUnderlineColor}
-              w={3}
+              w={'40%'}
               ml={2}
             />
           </Box>
