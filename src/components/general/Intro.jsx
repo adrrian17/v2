@@ -48,16 +48,8 @@ export default function Intro() {
           color={useColorModeValue('gray.500', 'gray.400')}
           fontSize={{ base: 'xl' }}
         >
-          Soy barista y co-fundador de{' '}
-          <Link
-            textDecorationLine={'underline'}
-            color={useColorModeValue('brand.500', 'brand.400')}
-            href="https://www.comicgram.mx/"
-            isExternal
-          >
-            Comicgram: Café & Cómics
-          </Link>
-          . En mis ratos libres me dedico a escribir guiones para cómic.
+          Soy barista, escritor y programador. En mis ratos libres me dedico a
+          escribir guiones y hacer lettering para cómic.
         </Text>
         <Stack pt={6} direction={'row'} spacing={6}>
           <Link
