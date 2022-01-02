@@ -80,7 +80,7 @@ export default function Navbar() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav onToggle={onToggle} />
       </Collapse>
     </Box>
   );
@@ -127,7 +127,7 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ onToggle }) => {
   return (
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
@@ -135,32 +135,27 @@ const MobileNav = () => {
       display={{ md: 'none' }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem key={navItem.label} {...navItem} onToggle={onToggle} />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, href }) => {
+const MobileNavItem = ({ label, href, onToggle }) => {
   return (
     <Stack spacing={4}>
-      <Flex
-        py={2}
-        as={NextLink}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text
+      <NextLink href={href ?? '#'} passHref>
+        <Link
           fontWeight={600}
           color={useColorModeValue('gray.600', 'gray.200')}
+          onClick={onToggle}
+          _active={{
+            textDecoration: 'none',
+          }}
         >
           {label}
-        </Text>
-      </Flex>
+        </Link>
+      </NextLink>
     </Stack>
   );
 };
