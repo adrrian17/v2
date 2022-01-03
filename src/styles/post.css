@@ -1,8 +1,8 @@
 .post p {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.25rem;
+  line-height: 1.8;
 }
 
 .post blockquote {
@@ -11,13 +11,14 @@
   padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.25rem;
+  line-height: 1.8;
  }
 
  .post a {
-  color: #094cdc;
-  text-decoration: underline #094cdc;
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline 3px #094cdc;
  }
 
 .post-date-1 + .post-date-1 .post-label,
