@@ -61,6 +61,7 @@ export default function Navbar() {
                 fontSize={{ base: '2xl', md: '5xl' }}
                 textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                 color={useColorModeValue('gray.800', 'white')}
+                ml={6}
               >
                 Sin Acento
               </Text>
@@ -72,7 +73,11 @@ export default function Navbar() {
           </Flex>
         </Flex>
 
-        <Flex flex={{ base: 1, md: 0 }} justify={'flex-end'}>
+        <Flex
+          flex={{ base: 1, md: 0 }}
+          justify={'flex-end'}
+          mr={{ base: 0, lg: 6 }}
+        >
           <Button variant={'ghost'} ml={6} onClick={toggleColorMode}>
             {colorMode === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
           </Button>
