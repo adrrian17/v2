@@ -3,6 +3,7 @@ import Head from 'next/head';
 import DefaultLayout from '~/layouts/DefaultLayout';
 import Intro from '~/components/general/Intro';
 import RecentPosts from '~/components/posts/RecentPosts';
+import SuscribeForm from '~/components/newsletter/SuscribeForm';
 
 import { getPosts } from '~/lib/ghost';
 
@@ -24,6 +25,7 @@ export default function Home({ posts }) {
       </Head>
       <Intro />
       <RecentPosts posts={posts} />
+      <SuscribeForm />
     </>
   );
 }
