@@ -54,8 +54,8 @@ export default function Intro() {
           fontSize={{ base: 'xl' }}
         >
           Soy barista, escritor y programador. En mis ratos libres escribo
-          guiones para cómic, en algunas ocasiones, hago proyectos de
-          programación. Actualmente estoy aprendiendo lettering para cómic.
+          guiones para cómic. Ocasionalmente, hago proyectos de programación.
+          Actualmente estoy aprendiendo lettering para cómic.
         </Text>
         <Stack pt={6} direction={'row'} spacing={6}>
           <Link
