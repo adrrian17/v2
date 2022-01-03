@@ -40,6 +40,9 @@ export default function RecentPosts({ posts }) {
                   fontWeight={700}
                   color={titleColor}
                   cursor={'pointer'}
+                  _hover={{
+                    textDecoration: 'underline 2px',
+                  }}
                 >
                   {post.title}
                 </Link>
