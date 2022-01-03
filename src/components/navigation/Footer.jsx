@@ -26,7 +26,7 @@ export default function Footer() {
       >
         <Text>© 2021 Adrian Ayala</Text>
         <Text>
-          Hecho con{' '}
+          Construido con{' '}
           <Link
             color={useColorModeValue('brand.500', 'brand.400')}
             href="https://ghost.org/"
