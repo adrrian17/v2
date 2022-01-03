@@ -53,8 +53,9 @@ export default function Intro() {
           color={useColorModeValue('gray.500', 'gray.400')}
           fontSize={{ base: 'xl' }}
         >
-          Soy barista, escritor y programador. En mis ratos libres me dedico a
-          escribir guiones y hacer lettering para cómic.
+          Soy barista, escritor y programador. En mis ratos libres escribo
+          guiones para cómic, en algunas ocasiones, hago proyectos de
+          programación. Actualmente estoy aprendiendo lettering para cómic.
         </Text>
         <Stack pt={6} direction={'row'} spacing={6}>
           <Link
