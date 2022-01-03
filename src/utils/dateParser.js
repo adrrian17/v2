@@ -64,5 +64,6 @@ export const dateFormatted = (date) => {
   return new Intl.DateTimeFormat('es-MX', {
     month: 'short',
     day: 'numeric',
+    year: 'numeric',
   }).format(new Date(date));
 };
