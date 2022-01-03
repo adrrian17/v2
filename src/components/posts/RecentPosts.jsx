@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 import NextLink from 'next/link';
+import { dateFormatted } from '~/utils/dateParser';
 
 export default function RecentPosts({ posts }) {
   const titleColor = useColorModeValue('gray.800', 'brand.400');
@@ -29,15 +30,7 @@ export default function RecentPosts({ posts }) {
         alignContent={'center'}
       >
         {posts.map((post) => {
-          const options = {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-          };
-
-          post.dateFormatted = new Intl.DateTimeFormat('es-MX', options).format(
-            new Date(post.published_at)
-          );
+          post.reading_time = post.reading_time === 0 ? 1 : post.reading_time;
 
           return (
             <Stack key={post.id}>
@@ -53,7 +46,7 @@ export default function RecentPosts({ posts }) {
               </NextLink>
               <Stack direction={'row'}>
                 <Text color={dateColor} fontWeight={500}>
-                  {post.dateFormatted}
+                  {dateFormatted(post.published_at)}
                 </Text>
                 <Text color={dateColor} fontWeight={500}>
                   •
