@@ -11,7 +11,9 @@ export default function Archivo({ posts }) {
       <Heading fontFamily={'Work Sans'} textAlign={'center'} mb={6}>
         El Archivo 🗃
       </Heading>
-      <Text textAlign={'center'}>Todos los posts en orden cronológico.</Text>
+      <Text textAlign={'center'} fontSize={'xl'}>
+        Todos los posts en orden cronológico.
+      </Text>
       {posts.map((post) => {
         return (
           <Stack
@@ -29,7 +31,7 @@ export default function Archivo({ posts }) {
               {monthAndYear(post.published_at)}
             </Text>
             <Stack direction={'row'} align={'center'}>
-              <Text fontSize={'sm'} fontWeight={500} color={'brand.500'}>
+              <Text fontSize={'sm'} fontWeight={500} color={'gray.500'}>
                 {dateFormatted(post.published_at)}
               </Text>
               <NextLink href={`/${post.slug}`} passHref>
