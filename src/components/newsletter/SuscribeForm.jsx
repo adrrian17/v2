@@ -110,9 +110,10 @@ export default function SuscribeForm() {
           </Button>
         </FormControl>
       </Stack>
-      <Text mt={2} textAlign={'center'} color={error ? 'red.500' : 'gray.500'}>
+      <Text mt={2} textAlign={'center'} color={error ? 'red.500' : 'green'}>
         {error &&
           '!Oh no ha ocurrido un error! 😢 Por favor intenta de nuevo más tarde.'}
+        {!error && state === 'success' && '¡Gracias por suscribirte! 🥳'}
       </Text>
     </Container>
   );
