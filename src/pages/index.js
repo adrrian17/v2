@@ -5,13 +5,32 @@ import Intro from '~/components/general/Intro';
 import RecentPosts from '~/components/posts/RecentPosts';
 import SuscribeForm from '~/components/newsletter/SuscribeForm';
 
-import { getPosts } from '~/lib/ghost';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 export async function getStaticProps() {
-  const posts = await getPosts();
+  const files = fs.readdirSync(path.join('./src/posts'));
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace('.md', '');
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join('./src/posts', filename),
+      'utf-8'
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return { slug, frontmatter };
+  });
+
+  posts.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  );
 
   return {
-    props: { posts },
+    props: { posts: posts.slice(0, 6) },
   };
 }
 

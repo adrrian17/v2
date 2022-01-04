@@ -16,6 +16,8 @@
     "@tryghost/admin-api": "^1.4.4",
     "@tryghost/content-api": "^1.5.16",
     "framer-motion": "^5.5.5",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.8",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",

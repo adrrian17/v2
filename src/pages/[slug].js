@@ -1,30 +1,24 @@
 import { Container, Heading, Stack, Text } from '@chakra-ui/react';
 import DefaultLayout from '~/layouts/DefaultLayout';
 
-import { getSinglePost, getPosts } from '~/lib/ghost';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { marked } from 'marked';
 
-export default function PostPage({ post }) {
-  const options = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  };
+import { dateFormatted } from '~/utils/dateParser';
 
-  post.dateFormatted = new Intl.DateTimeFormat('es-MX', options).format(
-    new Date(post.published_at)
-  );
-
+export default function PostPage({ slug, frontmatter, content }) {
   return (
     <Container maxW={'container.sm'} my={20}>
-      <Heading fontFamily={'Work Sans'}>{post.title}</Heading>
+      <Heading fontFamily={'Work Sans'}>{frontmatter.title}</Heading>
       <Stack direction={'row'} my={3}>
-        <Text>{post.dateFormatted}</Text>
-        <Text>•</Text>
-        <Text>
-          {post.reading_time} {post.reading_time > 1 ? 'minutos' : 'minuto'}
-        </Text>
+        <Text>{dateFormatted(frontmatter.date)}</Text>
       </Stack>
-      <div className="post" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        className="post"
+        dangerouslySetInnerHTML={{ __html: marked(content) }}
+      />
     </Container>
   );
 }
@@ -32,21 +26,36 @@ export default function PostPage({ post }) {
 PostPage.Layout = DefaultLayout;
 
 export async function getStaticProps({ params }) {
-  const post = await getSinglePost(params.slug);
+  const markdownWithMeta = fs.readFileSync(
+    path.join('./src/posts', params.slug + '.md'),
+    'utf-8'
+  );
 
-  if (!post) {
+  const { data: frontmatter, content } = matter(markdownWithMeta);
+
+  if (!frontmatter) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { post },
+    props: {
+      frontmatter,
+      content,
+    },
   };
 }
 
 export async function getStaticPaths() {
-  const posts = await getPosts('all');
+  const files = fs.readdirSync(path.join('./src/posts'));
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace('.md', '');
+    return { slug };
+  });
+
+  console.log(posts);
 
   const paths = posts.map((post) => ({
     params: { slug: post.slug },

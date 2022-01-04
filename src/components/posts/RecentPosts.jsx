@@ -14,7 +14,7 @@ import { dateFormatted } from '~/utils/dateParser';
 
 export default function RecentPosts({ posts }) {
   const titleColor = useColorModeValue('gray.800', 'brand.400');
-  const dateColor = useColorModeValue('brand.500', 'gray.200');
+  const dateColor = useColorModeValue('gray.400', 'gray.200');
 
   return (
     <Container maxW={'container.lg'} my={12}>
@@ -30,8 +30,6 @@ export default function RecentPosts({ posts }) {
         alignContent={'center'}
       >
         {posts.map((post) => {
-          post.reading_time = post.reading_time === 0 ? 1 : post.reading_time;
-
           return (
             <Stack key={post.id}>
               <NextLink href={`/${post.slug}`} passHref>
@@ -44,19 +42,12 @@ export default function RecentPosts({ posts }) {
                     textDecoration: 'underline 2px',
                   }}
                 >
-                  {post.title}
+                  {post.frontmatter.title}
                 </Link>
               </NextLink>
               <Stack direction={'row'}>
                 <Text color={dateColor} fontWeight={500}>
-                  {dateFormatted(post.published_at)}
-                </Text>
-                <Text color={dateColor} fontWeight={500}>
-                  •
-                </Text>
-                <Text color={dateColor} fontWeight={500}>
-                  {post.reading_time}{' '}
-                  {post.reading_time > 1 ? 'minutos' : 'minuto'}
+                  {dateFormatted(post.frontmatter.date)}
                 </Text>
               </Stack>
             </Stack>

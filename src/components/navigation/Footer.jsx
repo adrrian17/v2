@@ -29,13 +29,6 @@ export default function Footer() {
           Construido con{' '}
           <Link
             color={useColorModeValue('brand.500', 'brand.400')}
-            href="https://ghost.org/"
-          >
-            Ghost
-          </Link>
-          ,{' '}
-          <Link
-            color={useColorModeValue('brand.500', 'brand.400')}
             href="https://nextjs.org/"
           >
             Next.js
