@@ -7,7 +7,7 @@ export default function DefaultLayout({ children }) {
   return (
     <>
       <Navbar />
-      <Container maxW={'container.lg'}>{children}</Container>
+      {children}
       <Footer />
     </>
   );
