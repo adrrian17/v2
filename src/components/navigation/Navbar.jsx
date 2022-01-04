@@ -50,24 +50,7 @@ export default function Navbar() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex
-          flex={{ base: 1 }}
-          justify={{ base: 'center', md: 'space-between' }}
-        >
-          <NextLink href="/" passHref>
-            <Link _hover={{ textDecoration: 'none' }} _focus={{ ring: 0 }}>
-              <Text
-                fontFamily={'Billion Dreams'}
-                fontSize={{ base: '2xl', md: '5xl' }}
-                textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-                color={useColorModeValue('gray.800', 'white')}
-                ml={6}
-              >
-                Sin Acento
-              </Text>
-            </Link>
-          </NextLink>
-
+        <Flex flex={{ base: 1 }} justify={'center'}>
           <Flex display={{ base: 'none', md: 'flex' }} align={'center'}>
             <DesktopNav />
           </Flex>
@@ -151,7 +134,7 @@ const MobileNavItem = ({ label, href, onToggle }) => {
     <Stack spacing={4}>
       <NextLink href={href ?? '#'} passHref>
         <Link
-          fontWeight={600}
+          fontWeight={500}
           color={useColorModeValue('gray.600', 'gray.200')}
           onClick={onToggle}
           _active={{
