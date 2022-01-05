@@ -44,7 +44,8 @@ export async function getStaticProps() {
 }
 
 export default function Archivo({ posts }) {
-  const titleColor = useColorModeValue('gray.800', 'gray.400');
+  const titleColor = useColorModeValue('gray.800', 'whiteAlpha.900');
+  const dateColor = useColorModeValue('gray.500', 'gray.400');
 
   return (
     <Container maxW={'container.sm'} my={20}>
@@ -55,7 +56,7 @@ export default function Archivo({ posts }) {
         return (
           <Flex key={post.id} my={4}>
             <Flex flex={1} align={'center'} justify={'flex-end'} mr={4}>
-              <Text fontSize={'sm'} fontWeight={500} color={'gray.500'}>
+              <Text color={dateColor}>
                 {dateFormatted(post.frontmatter.date)}
               </Text>
             </Flex>
@@ -65,7 +66,6 @@ export default function Archivo({ posts }) {
                   fontSize={'lg'}
                   fontWeight={700}
                   color={titleColor}
-                  cursor={'pointer'}
                   _hover={{
                     textDecoration: 'underline 2px',
                   }}
