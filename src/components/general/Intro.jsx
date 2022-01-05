@@ -31,7 +31,7 @@ export default function Intro() {
         fontSize={'xl'}
       >
         Soy barista, escritor y programador. En mis ratos libres escribo guiones
-        para cómic, ocasionalmente, hago proyectos de programación.
+        para cómic, y ocasionalmente, hago proyectos de programación.
       </Text>
       <Stack pt={6} direction={'row'} spacing={6}>
         <Link
