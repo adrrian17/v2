@@ -25,7 +25,7 @@ export default function Navbar() {
     <Box>
       <Flex
         bg={useColorModeValue('white', 'darkBg')}
-        color={useColorModeValue('gray.600', 'white')}
+        color={useColorModeValue('gray.600', 'whiteAlpha.900')}
         minH={'60px'}
         py={2}
         px={4}
@@ -79,7 +79,6 @@ const DesktopNav = () => {
 
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('brand.500', 'white');
-  const linkUnderlineColor = useColorModeValue('brand.500', 'white');
 
   return (
     <Stack direction={'row'} spacing={10}>
@@ -105,7 +104,7 @@ const DesktopNav = () => {
               hidden={active ? false : true}
               rounded={'full'}
               h={'2px'}
-              bg={linkUnderlineColor}
+              bg={'brand.500'}
               w={'50%'}
             />
           </Stack>
