@@ -3,6 +3,7 @@ import {
   Heading,
   Link,
   Stack,
+  Flex,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -15,7 +16,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import { dateFormatted, monthAndYear, numericMonth } from '~/utils/dateParser';
+import { dateFormatted } from '~/utils/dateParser';
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('./src/posts'));
@@ -47,32 +48,18 @@ export default function Archivo({ posts }) {
 
   return (
     <Container maxW={'container.sm'} my={20}>
-      <Heading fontFamily={'Work Sans'} textAlign={'center'} mb={6}>
+      <Heading fontFamily={'Work Sans'} textAlign={'center'} mb={12}>
         El Archivo 🗃
       </Heading>
-      <Text textAlign={'center'} fontSize={'xl'}>
-        Todos los posts en orden cronológico.
-      </Text>
       {posts.map((post) => {
         return (
-          <Stack
-            key={post.id}
-            className={`post-date-${numericMonth(post.frontmatter.date)}`}
-          >
-            <Text
-              fontFamily={'Work Sans'}
-              fontWeight={700}
-              fontSize={'2xl'}
-              className="post-label"
-              mt={12}
-              color={'brand.500'}
-            >
-              {monthAndYear(post.frontmatter.date)}
-            </Text>
-            <Stack direction={'row'} align={'center'}>
+          <Flex key={post.id} my={4}>
+            <Flex flex={1} align={'center'} justify={'flex-end'} mr={4}>
               <Text fontSize={'sm'} fontWeight={500} color={'gray.500'}>
                 {dateFormatted(post.frontmatter.date)}
               </Text>
+            </Flex>
+            <Flex flex={2}>
               <NextLink href={`/${post.slug}`} passHref>
                 <Link
                   fontSize={'lg'}
@@ -86,8 +73,8 @@ export default function Archivo({ posts }) {
                   {post.frontmatter.title}
                 </Link>
               </NextLink>
-            </Stack>
-          </Stack>
+            </Flex>
+          </Flex>
         );
       })}
     </Container>
