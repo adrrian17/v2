@@ -24,39 +24,37 @@ export default function RecentPosts({ posts }) {
         </Heading>
         <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
       </Stack>
-      {posts.map((post) => {
-        return (
+      {posts.map((post) => (
+        <Flex
+          key={post.slug}
+          direction={{ base: 'column-reverse', md: 'row' }}
+          my={4}
+        >
           <Flex
-            direction={{ base: 'column-reverse', md: 'row' }}
-            key={post.id}
-            my={4}
+            flex={1}
+            justify={{ base: 'flex-start', md: 'flex-start' }}
+            align={'center'}
           >
-            <Flex
-              flex={1}
-              justify={{ base: 'flex-start', md: 'flex-start' }}
-              align={'center'}
-            >
-              <Text color={dateColor}>
-                {dateFormatted(post.frontmatter.date)}
-              </Text>
-            </Flex>
-            <Flex flex={2} ml={{ base: 0, md: -12 }}>
-              <NextLink href={`/${post.slug}`} passHref>
-                <Link
-                  fontSize={'xl'}
-                  fontWeight={700}
-                  color={titleColor}
-                  _hover={{
-                    textDecoration: 'underline 2px',
-                  }}
-                >
-                  {post.frontmatter.title}
-                </Link>
-              </NextLink>
-            </Flex>
+            <Text color={dateColor}>
+              {dateFormatted(post.frontmatter.date)}
+            </Text>
           </Flex>
-        );
-      })}
+          <Flex flex={2} ml={{ base: 0, md: -12 }}>
+            <NextLink href={`/${post.slug}`} passHref>
+              <Link
+                fontSize={'xl'}
+                fontWeight={700}
+                color={titleColor}
+                _hover={{
+                  textDecoration: 'underline 2px',
+                }}
+              >
+                {post.frontmatter.title}
+              </Link>
+            </NextLink>
+          </Flex>
+        </Flex>
+      ))}
     </Container>
   );
 }
