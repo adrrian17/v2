@@ -6,6 +6,7 @@ import {
   Flex,
   Text,
   useColorModeValue,
+  Box,
 } from '@chakra-ui/react';
 
 import DefaultLayout from '~/layouts/DefaultLayout';
@@ -49,9 +50,19 @@ export default function Archivo({ posts }) {
 
   return (
     <Container maxW={'container.sm'} my={20}>
-      <Heading fontFamily={'Work Sans'} textAlign={'center'} mb={12}>
-        El Archivo 🗃
-      </Heading>
+      <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
+        <Stack w={'fit-content'} mb={6}>
+          <Heading
+            fontFamily={'Work Sans'}
+            fontWeight={700}
+            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          >
+            El Archivo 🗃
+          </Heading>
+          <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
+        </Stack>
+        <Text>Todos los posts ({posts.length}) en orden cronológico.</Text>
+      </Flex>
       {posts.map((post) => {
         return (
           <Flex key={post.id} my={4}>
