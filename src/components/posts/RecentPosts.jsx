@@ -19,7 +19,11 @@ export default function RecentPosts({ posts }) {
   return (
     <Container maxW={'container.sm'} mx={'auto'} mb={12}>
       <Stack w={'fit-content'} mb={6}>
-        <Heading color={useColorModeValue('gray.800', 'whiteAlpha.900')}>
+        <Heading
+          fontFamily={'Work Sans'}
+          fontWeight={700}
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+        >
           Recientes
         </Heading>
         <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
