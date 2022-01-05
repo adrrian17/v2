@@ -12,7 +12,7 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 
-import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
+import { FiMenu, FiX, FiMoon, FiSun, FiRss } from 'react-icons/fi';
 
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -55,12 +55,13 @@ export default function Navbar() {
           </Flex>
         </Flex>
 
-        <Flex
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          mr={{ base: 0, lg: 6 }}
-        >
-          <Button variant={'ghost'} ml={6} onClick={toggleColorMode}>
+        <Flex flex={{ base: 1, md: 0 }} justify={'flex-end'}>
+          <Button
+            variant={'ghost'}
+            onClick={toggleColorMode}
+            _hover={{ color: useColorModeValue('brand.500', 'brand.400') }}
+            _focus={{ ring: 0 }}
+          >
             {colorMode === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
           </Button>
         </Flex>
