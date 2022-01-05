@@ -6,7 +6,7 @@ const theme = extendTheme({
     global: (props) => ({
       body: {
         color: mode('gray.800', 'whiteAlpha.900')(props),
-        bg: mode('white', '#151719')(props),
+        bg: mode('white', 'darkBg')(props),
       },
     }),
   },
@@ -23,6 +23,7 @@ const theme = extendTheme({
     },
   },
   colors: {
+    darkBg: '#151719',
     brand: {
       50: '#e2eeff',
       100: '#b3ccff',

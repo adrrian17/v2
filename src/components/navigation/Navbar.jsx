@@ -8,7 +8,6 @@ import {
   Collapse,
   Link,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   useColorMode,
 } from '@chakra-ui/react';
@@ -25,7 +24,7 @@ export default function Navbar() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('white', 'darkBg')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={2}
@@ -118,7 +117,7 @@ const DesktopNav = () => {
 const MobileNav = ({ onToggle }) => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={useColorModeValue('white', 'darkBg')}
       p={4}
       display={{ md: 'none' }}
     >
