@@ -46,7 +46,7 @@ export default function RecentPosts({ posts }) {
           <Flex flex={2} ml={{ base: 0, md: -12 }}>
             <NextLink href={`/${post.slug}`} passHref>
               <Link
-                fontSize={'xl'}
+                fontSize={'lg'}
                 fontWeight={700}
                 color={titleColor}
                 _hover={{
