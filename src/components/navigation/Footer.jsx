@@ -23,7 +23,7 @@ export default function Footer() {
           <Link
             color={useColorModeValue('gray.500', 'gray.400')}
             _hover={{ color: 'brand.500' }}
-            href="/rss"
+            href="/rss.xml"
             isExternal
           >
             <FiRss size={20} />
