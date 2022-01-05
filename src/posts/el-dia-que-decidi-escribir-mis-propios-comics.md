@@ -1,5 +1,5 @@
 ---
-title: 'El día que decidí escribir cómics'
+title: 'El día que decidí escribir mis propios cómics'
 date: Mar 05 2019
 ---
 

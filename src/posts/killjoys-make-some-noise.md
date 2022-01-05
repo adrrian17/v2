@@ -3,7 +3,7 @@ title: 'Killjoys, make some noise!'
 date: Jul 28 2021
 ---
 
-Los que me conocen saben que My Chemical Romance es una de mis bandas favoritas, Gerard Way es mi autor favorito y por supuesto Umbrella Academy es, para mí, la mejor historia que he leído en cómics. Hasta redacté un post de cómo fue que Gerard y su historia me convencieron de empezar a [escribir mis propios guiones](https://adrianayala.mx/el-dia-que-decidi-escribir-comics/). En esta ocasión voy a escribir sobre otra historia, también de Gerard, aunque menos conocida que Umbrella Academy, pero a mi parecer merece un lugar en el mismo pedestal: The True Lives of The Fabulous Killjoys.
+Los que me conocen saben que My Chemical Romance es una de mis bandas favoritas, Gerard Way es mi autor favorito y por supuesto Umbrella Academy es, para mí, la mejor historia que he leído en cómics. Hasta redacté un post de cómo fue que Gerard y su historia me convencieron de empezar a [escribir mis propios guiones](https://adrianayala.mx/el-dia-que-decidi-escribir-mis-propios-comics/). En esta ocasión voy a escribir sobre otra historia, también de Gerard, aunque menos conocida que Umbrella Academy, pero a mi parecer merece un lugar en el mismo pedestal: The True Lives of The Fabulous Killjoys.
 
 En Noviembre de 2010, My Chemical Romance lanzó su cuarto disco (en mi opinión, el segundo mejor) titulado “Danger Days: The True Lives of The Fabulous Killjoys”. Este disco, al igual que The Black Parade, relata una historia a través de sus canciones. Dicha historia está ambientada en 2019 con un mundo post-apocalíptico donde un grupo de rebeldes llamados Killjoys tratan de derrocar a Better Living Industries, una malvada corporación que tomó el control de Battery City, la última ciudad que queda en pie.
 
