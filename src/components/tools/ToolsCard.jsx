@@ -17,10 +17,10 @@ export default function ToolsCard() {
       <LinkBox>
         <Stack
           p={8}
-          bg={'gray.50'}
+          bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
           borderRadius={'xl'}
           _hover={{
-            bg: 'gray.100',
+            bg: useColorModeValue('gray.100', 'whiteAlpha.200'),
           }}
         >
           <NextLink href="/herramientas" passHref>
