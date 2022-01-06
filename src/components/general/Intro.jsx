@@ -16,11 +16,11 @@ export default function Intro() {
       <Text
         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
         fontWeight={700}
-        fontSize={'4xl'}
+        fontSize={'3xl'}
       >
-        Hola, soy Adrian (Sin Acento)
+        Hola, me llamo Adrian (Sin Acento)
       </Text>
-      <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'xl'}>
+      <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'lg'}>
         Soy barista, escritor y programador. En mis ratos libres escribo guiones
         para cómic, y ocasionalmente, hago proyectos de programación.
       </Text>
