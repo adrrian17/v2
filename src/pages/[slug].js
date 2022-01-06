@@ -8,9 +8,9 @@ import { marked } from 'marked';
 
 import { dateFormatted } from '~/utils/dateParser';
 
-export default function PostPage({ slug, frontmatter, content }) {
+export default function PostPage({ frontmatter, content }) {
   return (
-    <Container maxW={'container.sm'} my={20}>
+    <Container maxW={'container.md'} my={20}>
       <Heading fontFamily={'Work Sans'}>{frontmatter.title}</Heading>
       <Stack direction={'row'} my={3}>
         <Text>{dateFormatted(frontmatter.date)}</Text>
