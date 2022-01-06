@@ -24,7 +24,7 @@ export default function RecentPosts({ posts }) {
           fontWeight={700}
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
         >
-          Recientes
+          Recientes ⏰
         </Heading>
         <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
       </Stack>
