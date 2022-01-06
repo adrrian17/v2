@@ -12,7 +12,7 @@ import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 export default function Intro() {
   return (
-    <Container maxW={'container.sm'} my={{ base: 12, md: 24 }}>
+    <Container maxW={'container.sm'} mt={12} mb={{ base: 12, md: 16 }}>
       <Text
         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
         fontWeight={700}
