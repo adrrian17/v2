@@ -4,36 +4,27 @@ import {
   Link,
   useColorModeValue,
   Container,
+  Flex,
+  Image,
 } from '@chakra-ui/react';
 
 import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 export default function Intro() {
   return (
-    <Container
-      maxW={'container.sm'}
-      mx={'auto'}
-      mt={{ base: 0, md: 24 }}
-      mb={{ base: 16, md: 24 }}
-    >
-      <Stack direction={'row'} my={6}>
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontWeight={700}
-          fontSize={'4xl'}
-        >
-          Hola, soy Adrian (Sin Acento)
-        </Text>
-      </Stack>
+    <Container maxW={'container.sm'} my={{ base: 12, md: 24 }}>
       <Text
-        letterSpacing={'tight'}
-        color={useColorModeValue('gray.500', 'gray.400')}
-        fontSize={'xl'}
+        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+        fontWeight={700}
+        fontSize={'4xl'}
       >
+        Hola, soy Adrian (Sin Acento)
+      </Text>
+      <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'xl'}>
         Soy barista, escritor y programador. En mis ratos libres escribo guiones
         para cómic, y ocasionalmente, hago proyectos de programación.
       </Text>
-      <Stack pt={6} direction={'row'} spacing={6}>
+      <Stack mt={6} direction={'row'} spacing={6}>
         <Link
           _hover={{ color: 'brand.500' }}
           href="https://twitter.com/adrrian17"
