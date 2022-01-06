@@ -1,4 +1,4 @@
-import { Container, Heading, Stack, Text } from '@chakra-ui/react';
+import { Button, Container, Heading, Stack, Text } from '@chakra-ui/react';
 import DefaultLayout from '~/layouts/DefaultLayout';
 
 import fs from 'fs';
@@ -7,13 +7,31 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 
 import { dateFormatted } from '~/utils/dateParser';
+import { useRouter } from 'next/router';
+import { FiArrowLeft } from 'react-icons/fi';
 
 export default function PostPage({ frontmatter, content }) {
+  const router = useRouter();
+
   return (
     <Container maxW={'container.md'} my={20}>
+      <Button
+        mb={12}
+        size={'lg'}
+        variant={'link'}
+        onClick={() => router.back()}
+        _focus={{ ring: 0 }}
+        _hover={{
+          textDecoration: 'none',
+        }}
+      >
+        <FiArrowLeft /> Volver
+      </Button>
       <Heading fontFamily={'Work Sans'}>{frontmatter.title}</Heading>
-      <Stack direction={'row'} my={3}>
-        <Text>{dateFormatted(frontmatter.date)}</Text>
+      <Stack my={3}>
+        <Text fontSize={'lg'} color={'gray.500'}>
+          {dateFormatted(frontmatter.date)}
+        </Text>
       </Stack>
       <div
         className="post"
