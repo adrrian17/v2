@@ -1,0 +1,106 @@
+[
+  {
+    "icon": "📝",
+    "header": "Escritura",
+    "tools": [
+      {
+        "name": "iA Writer",
+        "url": "",
+        "description": "Para escribir posts y ediciones del boletín. Mi editor de texto favorito."
+      },
+      {
+        "name": "Highland 2",
+        "url": "",
+        "description": "Para escribir mis guiones."
+      },
+      {
+        "name": "Day One",
+        "url": "",
+        "description": "Para escribir mis pensamientos, literalmente un diario digital."
+      },
+      {
+        "name": "Notion",
+        "url": "",
+        "description": "Para anotar anoto diferentes cosas (gastos, ideas, etc.), una especie de libreta virtual."
+      },
+      {
+        "name": "Google Keep",
+        "url": "",
+        "description": "Para tener post-its virtuales."
+      }
+    ]
+  },
+  {
+    "icon": "🔉",
+    "header": "Audio",
+    "tools": [
+      {
+        "name": "Pocket Casts",
+        "url": "",
+        "description": "Para escuchar los miles de podcasts que sigo."
+      },
+      {
+        "name": "Spotify",
+        "url": "",
+        "description": "Para la música."
+      }
+    ]
+  },
+  {
+    "icon": "💻",
+    "header": "Programación",
+    "tools": [
+      {
+        "name": "Visual Studio Code",
+        "url": "",
+        "description": "Para escribir código. En mi opinión, el mejor editor de código."
+      },
+      {
+        "name": "Vercel",
+        "url": "",
+        "description": "Para hosting de este blog y otros proyectos."
+      },
+      {
+        "name": "GitHub",
+        "url": "",
+        "description": "Para guardar todo el código que hago."
+      },
+      {
+        "name": "Chakra UI",
+        "url": "",
+        "description": "Para darle forma a este blog. Un gran framework de UI."
+      },
+      {
+        "name": "Next.js",
+        "url": "",
+        "description": "Para construir  aplicaciones web con React. El mejor framework."
+      }
+    ]
+  },
+  {
+    "icon": "⚙️",
+    "header": "Extras",
+    "tools": [
+      {
+        "name": "1Password",
+        "url": "",
+        "description": "Para generar y guardar contraseñas de manera ultra segura."
+      },
+      {
+        "name": "Pocket",
+        "url": "",
+        "description": "Para guardar todos los enlaces que quiero leer después."
+      },
+      {
+        "name": "Tweetbot (iOS & Mac)",
+        "url": "",
+        "description": "Para leer Twitter, sin lugar a dudas, el mejor cliente de Twitter."
+      },
+      {
+        "name": "Spark (Mac)",
+        "url": "",
+        "description": "Para revisar el correo en la Mac. En el iPhone uso el cliente de Gmail."
+      }
+    ]
+  }
+]
