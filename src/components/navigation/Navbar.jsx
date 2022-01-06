@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Button,
   Stack,
@@ -12,7 +11,7 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 
-import { FiMenu, FiX, FiMoon, FiSun, FiRss } from 'react-icons/fi';
+import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -163,9 +162,5 @@ const NAV_ITEMS = [
   {
     label: 'Herramientas',
     href: '/herramientas',
-  },
-  {
-    label: 'Boletín',
-    href: '/boletin',
   },
 ];
