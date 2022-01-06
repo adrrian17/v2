@@ -3,6 +3,7 @@ import Head from 'next/head';
 import DefaultLayout from '~/layouts/DefaultLayout';
 import Intro from '~/components/general/Intro';
 import RecentPosts from '~/components/posts/RecentPosts';
+import ToolsCard from '~/components/tools/ToolsCard';
 
 import fs from 'fs';
 import path from 'path';
@@ -41,6 +42,7 @@ export default function Home({ posts }) {
       </Head>
       <Intro />
       <RecentPosts posts={posts} />
+      <ToolsCard />
     </>
   );
 }
