@@ -16,7 +16,7 @@ import data from '~/content/tools.json';
 export default function ToolLists() {
   const headerColor = useColorModeValue('gray.800', 'whiteAlpha.400');
   const linkColor = useColorModeValue('gray.800', 'whiteAlpha.900');
-  const acordionColor = useColorModeValue('gray.50', 'whiteAlpha.100');
+  const acordionColor = useColorModeValue('gray.100', 'whiteAlpha.100');
 
   return (
     <Accordion defaultIndex={0}>
