@@ -1,4 +1,11 @@
-import { Button, Container, Heading, Stack, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Container,
+  Heading,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import DefaultLayout from '~/layouts/DefaultLayout';
 
 import fs from 'fs';
@@ -8,7 +15,7 @@ import { marked } from 'marked';
 
 import { dateFormatted } from '~/utils/dateParser';
 import { useRouter } from 'next/router';
-import { FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeftCircle } from 'react-icons/fi';
 
 export default function PostPage({ frontmatter, content }) {
   const router = useRouter();
@@ -19,13 +26,15 @@ export default function PostPage({ frontmatter, content }) {
         mb={12}
         size={'lg'}
         variant={'link'}
+        leftIcon={<FiArrowLeftCircle />}
         onClick={() => router.back()}
         _focus={{ ring: 0 }}
         _hover={{
           textDecoration: 'none',
+          color: useColorModeValue('gray.800', 'whiteAlpha.900'),
         }}
       >
-        <FiArrowLeft /> Volver
+        Volver
       </Button>
       <Heading fontFamily={'Work Sans'}>{frontmatter.title}</Heading>
       <Stack my={3}>
