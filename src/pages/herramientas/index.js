@@ -1,7 +1,6 @@
 import {
   Container,
   Heading,
-  Link,
   Stack,
   Flex,
   Text,
@@ -14,9 +13,6 @@ import DefaultLayout from '~/layouts/DefaultLayout';
 import ToolLists from '~/components/tools/ToolsList';
 
 export default function Herramientas({ posts }) {
-  const titleColor = useColorModeValue('gray.800', 'whiteAlpha.900');
-  const dateColor = useColorModeValue('gray.500', 'gray.400');
-
   return (
     <Container maxW={'container.sm'} my={20}>
       <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
