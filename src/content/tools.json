@@ -5,27 +5,27 @@
     "tools": [
       {
         "name": "iA Writer",
-        "url": "",
+        "url": "https://ia.net/es/writer",
         "description": "Para escribir posts y ediciones del boletín. Mi editor de texto favorito."
       },
       {
         "name": "Highland 2",
-        "url": "",
+        "url": "https://highland2.app/",
         "description": "Para escribir mis guiones."
       },
       {
         "name": "Day One",
-        "url": "",
+        "url": "https://dayoneapp.com/",
         "description": "Para escribir mis pensamientos, literalmente un diario digital."
       },
       {
         "name": "Notion",
-        "url": "",
+        "url": "https://www.notion.so/",
         "description": "Para anotar anoto diferentes cosas (gastos, ideas, etc.), una especie de libreta virtual."
       },
       {
         "name": "Google Keep",
-        "url": "",
+        "url": "https://keep.google.com/",
         "description": "Para tener post-its virtuales."
       }
     ]
@@ -36,12 +36,12 @@
     "tools": [
       {
         "name": "Pocket Casts",
-        "url": "",
+        "url": "https://www.pocketcasts.com/",
         "description": "Para escuchar los miles de podcasts que sigo."
       },
       {
         "name": "Spotify",
-        "url": "",
+        "url": "https://www.spotify.com/",
         "description": "Para la música."
       }
     ]
@@ -52,27 +52,27 @@
     "tools": [
       {
         "name": "Visual Studio Code",
-        "url": "",
+        "url": "https://code.visualstudio.com/",
         "description": "Para escribir código. En mi opinión, el mejor editor de código."
       },
       {
         "name": "Vercel",
-        "url": "",
+        "url": "https://vercel.com/",
         "description": "Para hosting de este blog y otros proyectos."
       },
       {
         "name": "GitHub",
-        "url": "",
+        "url": "https://github.com/",
         "description": "Para guardar todo el código que hago."
       },
       {
         "name": "Chakra UI",
-        "url": "",
+        "url": "https://chakra-ui.com/",
         "description": "Para darle forma a este blog. Un gran framework de UI."
       },
       {
         "name": "Next.js",
-        "url": "",
+        "url": "https://nextjs.org/",
         "description": "Para construir  aplicaciones web con React. El mejor framework."
       }
     ]
@@ -83,22 +83,22 @@
     "tools": [
       {
         "name": "1Password",
-        "url": "",
+        "url": "https://1password.com/",
         "description": "Para generar y guardar contraseñas de manera ultra segura."
       },
       {
         "name": "Pocket",
-        "url": "",
+        "url": "https://getpocket.com/",
         "description": "Para guardar todos los enlaces que quiero leer después."
       },
       {
         "name": "Tweetbot (iOS & Mac)",
-        "url": "",
+        "url": "https://tapbots.com/tweetbot/",
         "description": "Para leer Twitter, sin lugar a dudas, el mejor cliente de Twitter."
       },
       {
         "name": "Spark (Mac)",
-        "url": "",
+        "url": "https://sparkmailapp.com/",
         "description": "Para revisar el correo en la Mac. En el iPhone uso el cliente de Gmail."
       }
     ]
