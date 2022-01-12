@@ -8,6 +8,7 @@ import ToolsCard from '~/components/tools/ToolsCard';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import ScriptsCard from '~/components/scripts/ScriptsCard';
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('./src/posts'));
@@ -43,6 +44,7 @@ export default function Home({ posts }) {
       <Intro />
       <RecentPosts posts={posts} />
       <ToolsCard />
+      <ScriptsCard />
     </>
   );
 }
