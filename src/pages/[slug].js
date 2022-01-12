@@ -54,7 +54,7 @@ PostPage.Layout = DefaultLayout;
 
 export async function getStaticProps({ params }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join('./src/posts', params.slug + '.md'),
+    path.join('./src/content/posts', params.slug + '.md'),
     'utf-8'
   );
 
@@ -75,7 +75,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('./src/posts'));
+  const files = fs.readdirSync(path.join('./src/content/posts'));
 
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '');

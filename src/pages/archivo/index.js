@@ -20,13 +20,13 @@ import matter from 'gray-matter';
 import { dateFormatted } from '~/utils/dateParser';
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join('./src/posts'));
+  const files = fs.readdirSync(path.join('./src/content/posts'));
 
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '');
 
     const markdownWithMeta = fs.readFileSync(
-      path.join('./src/posts', filename),
+      path.join('./src/content/posts', filename),
       'utf-8'
     );
 

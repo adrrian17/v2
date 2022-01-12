@@ -3,10 +3,10 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const getAllPosts = () => {
-  const filenames = fs.readdirSync(path.join('./src/posts'));
+  const filenames = fs.readdirSync(path.join('./src/content/posts'));
 
   const posts = filenames.map((filename) => {
-    const filepath = path.join('./src/posts', filename);
+    const filepath = path.join('./src/content/posts', filename);
     const markdownWithMeta = fs.readFileSync(filepath, 'utf-8');
     const { data } = matter(markdownWithMeta);
 
@@ -14,7 +14,7 @@ const getAllPosts = () => {
       title: data.title,
       date: data.date,
       excerpt: data.excerpt,
-      link: 'https://adrianayala.mx./' + filename.replace('.md', ''),
+      link: 'https://adrianayala.mx/' + filename.replace('.md', ''),
     };
   });
 
