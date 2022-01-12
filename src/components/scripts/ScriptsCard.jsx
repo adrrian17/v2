@@ -15,10 +15,10 @@ import NextLink from 'next/link';
 
 export default function ScriptsCard() {
   return (
-    <Container maxW={'container.sm'} mx={'auto'} mb={12}>
+    <Container maxW={'container.sm'} mx={'auto'}>
       <motion.div
         whileHover={{
-          scale: 1.02,
+          scale: 1.05,
         }}
       >
         <LinkBox>
@@ -27,13 +27,11 @@ export default function ScriptsCard() {
             direction={'row'}
             align={'center'}
             justify={'space-between'}
-            bg={useColorModeValue('gray.100', 'whiteAlpha.100')}
+            borderColor={'brand.400'}
+            borderWidth={3}
             borderRadius={'xl'}
-            _hover={{
-              bg: useColorModeValue('gray.200', 'whiteAlpha.200'),
-            }}
           >
-            <Stack>
+            <Stack align={'center'}>
               <NextLink href="/guiones" passHref>
                 <LinkOverlay>
                   <Stack w={'fit-content'} mb={2}>
@@ -56,7 +54,6 @@ export default function ScriptsCard() {
               </NextLink>
               <Text>Algunos de los guiones de cómic que he escrito.</Text>
             </Stack>
-            <FiChevronRight size={30} />
           </Stack>
         </LinkBox>
       </motion.div>

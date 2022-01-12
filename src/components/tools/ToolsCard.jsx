@@ -15,10 +15,10 @@ import NextLink from 'next/link';
 
 export default function ToolsCard() {
   return (
-    <Container maxW={'container.sm'} mx={'auto'} mb={12}>
+    <Container maxW={'container.sm'} mx={'auto'} mb={{ base: 6, md: 0 }}>
       <motion.div
         whileHover={{
-          scale: 1.02,
+          scale: 1.05,
         }}
       >
         <LinkBox>
@@ -27,13 +27,14 @@ export default function ToolsCard() {
             direction={'row'}
             align={'center'}
             justify={'space-between'}
-            bg={useColorModeValue('gray.100', 'whiteAlpha.100')}
+            borderColor={'brand.400'}
+            borderWidth={3}
             borderRadius={'xl'}
-            _hover={{
-              bg: useColorModeValue('gray.200', 'whiteAlpha.200'),
-            }}
+            // _hover={{
+            //   bg: useColorModeValue('gray.200', 'whiteAlpha.200'),
+            // }}
           >
-            <Stack>
+            <Stack align={'center'}>
               <NextLink href="/herramientas" passHref>
                 <LinkOverlay>
                   <Stack w={'fit-content'} mb={2}>
@@ -56,7 +57,6 @@ export default function ToolsCard() {
               </NextLink>
               <Text>Las apps y servicios que uso en el día a día.</Text>
             </Stack>
-            <FiChevronRight size={30} />
           </Stack>
         </LinkBox>
       </motion.div>

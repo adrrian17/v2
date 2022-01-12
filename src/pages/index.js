@@ -3,12 +3,11 @@ import Head from 'next/head';
 import DefaultLayout from '~/layouts/DefaultLayout';
 import Intro from '~/components/general/Intro';
 import RecentPosts from '~/components/posts/RecentPosts';
-import ToolsCard from '~/components/tools/ToolsCard';
+import ExtraContent from '~/components/general/ExtraContent';
 
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ScriptsCard from '~/components/scripts/ScriptsCard';
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('./src/posts'));
@@ -43,8 +42,7 @@ export default function Home({ posts }) {
       </Head>
       <Intro />
       <RecentPosts posts={posts} />
-      <ToolsCard />
-      <ScriptsCard />
+      <ExtraContent />
     </>
   );
 }
