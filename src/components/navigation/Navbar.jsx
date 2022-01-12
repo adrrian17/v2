@@ -159,8 +159,4 @@ const NAV_ITEMS = [
     label: 'Proyectos',
     href: '/proyectos',
   },
-  {
-    label: 'Herramientas',
-    href: '/herramientas',
-  },
 ];
