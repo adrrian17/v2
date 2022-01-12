@@ -38,6 +38,7 @@ export default function ComicsGrid() {
                   justify={'space-between'}
                   bg={cardBg}
                   borderRadius={'xl'}
+                  shadow={'md'}
                 >
                   <Box
                     w={'full'}
