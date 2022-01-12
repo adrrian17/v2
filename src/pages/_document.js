@@ -18,6 +18,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather&family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
+          <script
+            async
+            defer
+            data-website-id="71827f57-63cd-4666-8e83-897f2ba3b094"
+            src="https://umami.adrianayala.mx/umami.js"
+          />
         </Head>
         <body>
           <Main />
