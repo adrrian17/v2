@@ -14,15 +14,13 @@ import { dateFormatted } from '~/utils/dateParser';
 
 import NextLink from 'next/link';
 
-import data from '~/content/comics.json';
-
-export default function ComicsGrid() {
+export default function ComicsGrid({ comics }) {
   const cardBg = useColorModeValue('gray.100', 'whiteAlpha.200');
   const cardText = useColorModeValue('gray.800', 'whiteAlpha.900');
 
   return (
     <SimpleGrid mt={12} columns={{ base: 1, md: 2 }} spacing={12}>
-      {data.map((project, index) => (
+      {comics.map((comic, index) => (
         <motion.div
           key={index}
           whileHover={{
@@ -30,7 +28,7 @@ export default function ComicsGrid() {
           }}
         >
           <LinkBox>
-            <NextLink href={`/comics/${project.slug}`} passHref>
+            <NextLink href={`/comics/${comic.slug}`} passHref>
               <LinkOverlay>
                 <Stack
                   overflow={'hidden'}
@@ -43,18 +41,20 @@ export default function ComicsGrid() {
                   <Box
                     w={'full'}
                     h={'200px'}
-                    bgImage={project.image}
+                    bgImage={comic.frontmatter.header}
                     bgPos={'center'}
                     bgSize={'cover'}
                   />
                   <Stack p={3} align={'center'}>
                     <Tag rounded={'full'} bg={'brand.400'} color={'white'}>
-                      {project.tag}
+                      {comic.frontmatter.tag}
                     </Tag>
                     <Text fontSize={'xl'} fontWeight={'bold'} color={cardText}>
-                      {project.title}
+                      {comic.frontmatter.title}
                     </Text>
-                    <Text color={cardText}>{dateFormatted(project.date)}</Text>
+                    <Text color={cardText}>
+                      {dateFormatted(comic.frontmatter.date)}
+                    </Text>
                   </Stack>
                 </Stack>
               </LinkOverlay>

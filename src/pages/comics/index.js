@@ -11,7 +11,11 @@ import {
 import DefaultLayout from '~/layouts/DefaultLayout';
 import ComicsGrid from '~/components/comics/ComicsGrid';
 
-export default function Comics() {
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+export default function Comics({ comics }) {
   return (
     <Container maxW={'container.lg'} my={20}>
       <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
@@ -25,11 +29,36 @@ export default function Comics() {
           </Heading>
           <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
         </Stack>
-        <Text>Todos los cómics que he escrito.</Text>
+        <Text>Todos los cómics que he escrito y publicado.</Text>
       </Flex>
-      <ComicsGrid />
+      <ComicsGrid comics={comics} />
     </Container>
   );
 }
 
 Comics.Layout = DefaultLayout;
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join('./src/content/comics'));
+
+  const comics = files.map((filename) => {
+    const slug = filename.replace('.md', '');
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join('./src/content/comics', filename),
+      'utf-8'
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return { slug, frontmatter };
+  });
+
+  comics.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  );
+
+  return {
+    props: { comics },
+  };
+}
