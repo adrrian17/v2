@@ -54,7 +54,7 @@ export default function ScriptsCard() {
                   </Stack>
                 </LinkOverlay>
               </NextLink>
-              <Text>Todos los guiones de cómics que he escrito.</Text>
+              <Text>Algunos de los guiones de cómic que he escrito.</Text>
             </Stack>
             <FiChevronRight size={30} />
           </Stack>
