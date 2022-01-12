@@ -30,7 +30,7 @@ export default function ComicsGrid() {
           }}
         >
           <LinkBox>
-            <NextLink href={`/proyectos/${project.slug}`} passHref>
+            <NextLink href={`/comics/${project.slug}`} passHref>
               <LinkOverlay>
                 <Stack
                   overflow={'hidden'}

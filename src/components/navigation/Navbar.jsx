@@ -156,7 +156,7 @@ const NAV_ITEMS = [
     href: '/archivo',
   },
   {
-    label: 'Proyectos',
-    href: '/proyectos',
+    label: 'Cómics',
+    href: '/comics',
   },
 ];

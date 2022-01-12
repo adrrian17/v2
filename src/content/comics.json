@@ -5,7 +5,7 @@
     "tag": "Novela Gráfica",
     "date": "Jul 29 2019",
     "description": "Esta es la historia de Lucas",
-    "image": "/images/projects/xibalba.jpg"
+    "image": "/images/comics/xibalba.jpg"
   },
   {
     "slug": "thank-you",
@@ -13,7 +13,7 @@
     "tag": "Mini Cómic",
     "date": "Apr 26 2019",
     "description": "Esta es la historia de Lucas",
-    "image": "/images/projects/thank-you.jpg"
+    "image": "/images/comics/thank-you.jpg"
   },
   {
     "slug": "miedo-a-la-oscuridad",
@@ -21,7 +21,7 @@
     "tag": "Mini Cómic",
     "date": "Jan 12 2018",
     "description": "Esta es la historia de Lucas",
-    "image": "/images/projects/miedo-a-la-oscuridad.png"
+    "image": "/images/comics/miedo-a-la-oscuridad.png"
   },
   {
     "slug": "heroe-imaginario",
@@ -29,6 +29,6 @@
     "tag": "Mini Cómic",
     "date": "Feb 21 2017",
     "description": "Esta es la historia de Lucas",
-    "image": "/images/projects/heroe-imaginario.png"
+    "image": "/images/comics/heroe-imaginario.png"
   }
 ]
