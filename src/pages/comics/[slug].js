@@ -19,7 +19,6 @@ import { dateFormatted } from '~/utils/dateParser';
 
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { defaultSEO } from '~/config/seo';
 
 export default function ComicPage({ frontmatter, content }) {
   const router = useRouter();
@@ -29,7 +28,27 @@ export default function ComicPage({ frontmatter, content }) {
       <NextSeo
         title={frontmatter.title}
         description={frontmatter.description}
-        openGraph={frontmatter.header}
+        openGraph={{
+          title: frontmatter.title,
+          description: frontmatter.description,
+          openGraph: {
+            type: 'website',
+            locale: 'es_MX',
+            url: baseUrl,
+            site_name: frontmatter.title,
+            images: [
+              {
+                url: frontmatter.header,
+                alt: frontmatter.title,
+              },
+            ],
+          },
+          twitter: {
+            handle: '@adrrian17',
+            site: '@adrrian17',
+            cardType: 'summary_large_image',
+          },
+        }}
       />
       <Container maxW={'container.md'} my={20}>
         <Button
