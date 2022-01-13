@@ -17,7 +17,7 @@ export const defaultSEO = {
     site_name: 'Adrian (Sin Acento)',
     images: [
       {
-        url: `${baseUrl}/images/og/header.png`,
+        url: `/images/og/header.png`,
         alt: 'Adrian (Sin Acento)',
       },
     ],
@@ -31,17 +31,17 @@ export const defaultSEO = {
 
 export function extendSEO(options) {
   const images = options.image
-    ? [{ url: `${baseUrl}/images/${options.image}` }]
+    ? [{ url: `/images/${options.image}` }]
     : defaultSEO.openGraph.images;
 
   return {
     ...defaultSEO,
     ...options,
-    url: `${baseUrl}/${options.url}`,
+    url: `/${options.url}`,
     openGraph: {
       ...defaultSEO.openGraph,
       images,
-      url: `${baseUrl}/${options.url}`,
+      url: `/${options.url}`,
     },
   };
 }
