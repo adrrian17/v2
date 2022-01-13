@@ -19,6 +19,7 @@ import { dateFormatted } from '~/utils/dateParser';
 
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import { defaultSEO } from '~/config/seo';
 
 export default function ComicPage({ frontmatter, content }) {
   const router = useRouter();
@@ -28,6 +29,7 @@ export default function ComicPage({ frontmatter, content }) {
       <NextSeo
         title={frontmatter.title}
         description={frontmatter.description}
+        openGraph={defaultSEO.openGraph}
       />
       <Container maxW={'container.md'} my={20}>
         <Button
