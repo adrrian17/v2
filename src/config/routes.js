@@ -14,7 +14,7 @@ const routes = {
     path: '/archivo',
     seo: extendSEO({
       title: 'Archivo',
-      description: 'Todos los posts en orden cronológico..',
+      description: 'Todos los posts en orden cronológico.',
       url: 'archivo',
     }),
   },

@@ -8,7 +8,8 @@ export const baseEmail = 'adrian.ayala17@gmail.com';
 
 export const defaultSEO = {
   title: 'Adrian (Sin Acento)',
-  description: 'Soy barista, escritor y programador.',
+  description:
+    'Hola, me llamo Adrian (Sin Acento) y este es mi blog / portfolio. Soy barista, escritor y programador.',
   openGraph: {
     type: 'website',
     locale: 'es_MX',
