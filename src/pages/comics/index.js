@@ -15,24 +15,35 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+import { NextSeo } from 'next-seo';
+
+import routes from '~/config/routes';
+
 export default function Comics({ comics }) {
   return (
-    <Container maxW={'container.lg'} my={20}>
-      <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
-        <Stack w={'fit-content'} mb={6}>
-          <Heading
-            fontFamily={'Work Sans'}
-            fontWeight={700}
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          >
-            Cómics 📚
-          </Heading>
-          <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
-        </Stack>
-        <Text>Todos los cómics que he escrito y publicado.</Text>
-      </Flex>
-      <ComicsGrid comics={comics} />
-    </Container>
+    <>
+      <NextSeo
+        title={routes.comics.seo.title}
+        description={routes.comics.seo.description}
+        openGraph={routes.comics.seo.openGraph}
+      />
+      <Container maxW={'container.lg'} my={20}>
+        <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
+          <Stack w={'fit-content'} mb={6}>
+            <Heading
+              fontFamily={'Work Sans'}
+              fontWeight={700}
+              color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            >
+              Cómics 📚
+            </Heading>
+            <Box rounded={'full'} h={'3px'} bg={'brand.500'} w={'50%'} />
+          </Stack>
+          <Text>Todos los cómics que he escrito y publicado.</Text>
+        </Flex>
+        <ComicsGrid comics={comics} />
+      </Container>
+    </>
   );
 }
 
