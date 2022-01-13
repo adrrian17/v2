@@ -29,7 +29,7 @@ export default function ComicPage({ frontmatter, content }) {
       <NextSeo
         title={frontmatter.title}
         description={frontmatter.description}
-        openGraph={defaultSEO.openGraph}
+        openGraph={frontmatter.header}
       />
       <Container maxW={'container.md'} my={20}>
         <Button
