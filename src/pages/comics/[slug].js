@@ -6,6 +6,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+
 import { FiArrowLeftCircle } from 'react-icons/fi';
 
 import DefaultLayout from '~/layouts/DefaultLayout';
@@ -32,18 +33,16 @@ export default function ComicPage({ slug, frontmatter, content }) {
         openGraph={{
           title: frontmatter.title,
           description: frontmatter.description,
-          openGraph: {
-            type: 'website',
-            locale: 'es_MX',
-            url,
-            site_name: frontmatter.title,
-            images: [
-              {
-                url: frontmatter.header,
-                alt: frontmatter.title,
-              },
-            ],
-          },
+          url,
+          site_name: frontmatter.title,
+          type: 'website',
+          locale: 'es_MX',
+          images: [
+            {
+              url: frontmatter.header,
+              alt: frontmatter.title,
+            },
+          ],
           twitter: {
             handle: '@adrrian17',
             site: '@adrrian17',
