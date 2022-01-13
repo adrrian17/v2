@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 import DefaultLayout from '~/layouts/DefaultLayout';
 import Intro from '~/components/general/Intro';
@@ -8,6 +9,7 @@ import ExtraContent from '~/components/general/ExtraContent';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import routes from '~/config/routes';
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('./src/content/posts'));
@@ -37,9 +39,11 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
-      <Head>
-        <title>Adrian (Sin Acento) Ayala</title>
-      </Head>
+      <NextSeo
+        title={routes.home.seo.title}
+        description={routes.home.seo.description}
+        openGraph={routes.home.seo.openGraph}
+      />
       <Intro />
       <RecentPosts posts={posts} />
       <ExtraContent />
