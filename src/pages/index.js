@@ -42,6 +42,7 @@ export default function Home({ posts }) {
         title={routes.home.seo.title}
         description={routes.home.seo.description}
         openGraph={routes.home.seo.openGraph}
+        twitter={routes.home.seo.twitter}
       />
       <Intro />
       <RecentPosts posts={posts} />

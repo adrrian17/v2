@@ -28,6 +28,7 @@ export default function Guiones() {
         title={routes.scripts.seo.title}
         description={routes.scripts.seo.description}
         openGraph={routes.scripts.seo.openGraph}
+        twitter={routes.scripts.seo.twitter}
       />
       <Container maxW={'container.sm'} my={20}>
         <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>

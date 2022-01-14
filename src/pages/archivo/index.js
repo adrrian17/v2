@@ -31,6 +31,7 @@ export default function Archivo({ posts }) {
         title={routes.archive.seo.title}
         description={routes.archive.seo.description}
         openGraph={routes.archive.seo.openGraph}
+        twitter={routes.archive.seo.twitter}
       />
       <Container maxW={'container.sm'} my={20}>
         <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>

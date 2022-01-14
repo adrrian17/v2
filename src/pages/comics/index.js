@@ -26,6 +26,7 @@ export default function Comics({ comics }) {
         title={routes.comics.seo.title}
         description={routes.comics.seo.description}
         openGraph={routes.comics.seo.openGraph}
+        twitter={routes.comics.seo.twitter}
       />
       <Container maxW={'container.lg'} my={20}>
         <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
