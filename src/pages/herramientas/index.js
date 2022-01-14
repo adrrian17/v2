@@ -22,6 +22,7 @@ export default function Herramientas({ posts }) {
         title={routes.tools.seo.title}
         description={routes.tools.seo.description}
         openGraph={routes.tools.seo.openGraph}
+        twitter={routes.tools.seo.twitter}
       />
       <Container maxW={'container.sm'} my={20}>
         <Flex flex={1} flexDir={'column'} align={'center'} mb={12}>
