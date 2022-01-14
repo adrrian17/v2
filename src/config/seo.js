@@ -31,7 +31,7 @@ export const defaultSEO = {
 
 export function extendSEO(options) {
   const images = options.image
-    ? [{ url: `${baseUrl}/images/${options.image}` }]
+    ? [{ url: `${baseUrl}/images/og/${options.image}` }]
     : defaultSEO.openGraph.images;
 
   return {

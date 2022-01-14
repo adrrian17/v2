@@ -16,6 +16,7 @@ const routes = {
       title: 'Archivo',
       description: 'Todos los posts en orden cronológico.',
       url: 'archivo',
+      image: 'archive.png',
     }),
   },
   comics: {
@@ -25,6 +26,7 @@ const routes = {
       title: 'Cómics',
       description: 'Todos los cómics que he escrito y publicado.',
       url: 'comics',
+      image: 'comics.png',
     }),
   },
   tools: {
@@ -34,6 +36,7 @@ const routes = {
       title: 'Herramientas',
       description: 'Las apps y servicios que uso en el día a día.',
       url: 'herramientas',
+      image: 'tools.png',
     }),
   },
   scripts: {
@@ -43,6 +46,7 @@ const routes = {
       title: 'Guiones',
       description: 'Algunos de los guiones de cómic que he escrito.',
       url: 'guiones',
+      image: 'scripts.png',
     }),
   },
 };
