@@ -20,10 +20,12 @@ import { dateFormatted } from '~/utils/dateParser';
 
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import { baseUrl } from '~/config/seo';
 
 export default function ComicPage({ slug, frontmatter, content }) {
   const router = useRouter();
-  const url = `/comics/${slug}`;
+  const url = `${baseUrl}/comics/${slug}`;
+  const comicHeader = `${baseUrl}${frontmatter.header}`;
 
   return (
     <>
@@ -39,15 +41,15 @@ export default function ComicPage({ slug, frontmatter, content }) {
           locale: 'es_MX',
           images: [
             {
-              url: frontmatter.header,
+              url: comicHeader,
               alt: frontmatter.title,
             },
           ],
-          twitter: {
-            handle: '@adrrian17',
-            site: '@adrrian17',
-            cardType: 'summary_large_image',
-          },
+        }}
+        twitter={{
+          handle: '@adrrian17',
+          site: '@adrrian17',
+          cardType: 'summary_large_image',
         }}
       />
       <Container maxW={'container.md'} my={20}>
