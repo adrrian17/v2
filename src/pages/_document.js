@@ -8,9 +8,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
-          <meta name="description" content="Hago café y guiones para cómic." />
+          <meta
+            name="description"
+            content="Hola, me llamo Adrian (Sin Acento) y este es mi blog / portfolio. Soy barista, escritor y programador."
+          />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
