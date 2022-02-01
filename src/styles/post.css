@@ -24,7 +24,13 @@
 .post a {
   color: #1A202C;
   font-weight: bold;
-  text-decoration: underline 3px #094cdc;
+  text-decoration: underline 2px #094cdc;
+}
+
+.post a:hover {
+  background: #094cdc;
+  color: white;
+  padding-bottom: 3px;
 }
 
 
