@@ -50,11 +50,6 @@ export default function Archivo({ posts }) {
         {posts.map((post) => {
           return (
             <Flex key={post.id} my={4}>
-              <Flex flex={1} align={'center'} justify={'flex-end'} mr={4}>
-                <Text color={dateColor}>
-                  {dateFormatted(post.frontmatter.date)}
-                </Text>
-              </Flex>
               <Flex flex={2}>
                 <NextLink href={`/${post.slug}`} passHref>
                   <Link
@@ -68,6 +63,11 @@ export default function Archivo({ posts }) {
                     {post.frontmatter.title}
                   </Link>
                 </NextLink>
+              </Flex>
+              <Flex flex={1} align={'center'} justify={'flex-end'}>
+                <Text color={dateColor}>
+                  {dateFormatted(post.frontmatter.date)}
+                </Text>
               </Flex>
             </Flex>
           );
