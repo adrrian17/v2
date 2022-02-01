@@ -4,8 +4,6 @@ import {
   Link,
   useColorModeValue,
   Container,
-  Flex,
-  Image,
 } from '@chakra-ui/react';
 
 import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
@@ -24,7 +22,7 @@ export default function Intro() {
         Soy barista, escritor y programador. En mis ratos libres escribo guiones
         para cómic, y ocasionalmente, hago proyectos de programación.
       </Text>
-      <Stack mt={6} direction={'row'} spacing={6}>
+      <Stack mt={6} justify={'center'} direction={'row'} spacing={6}>
         <Link
           _hover={{ color: 'brand.500' }}
           href="https://twitter.com/adrrian17"
