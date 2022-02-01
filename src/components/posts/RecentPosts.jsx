@@ -1,14 +1,12 @@
 import {
   Box,
   Container,
-  Heading,
   Link,
   Stack,
   Text,
   Flex,
   useColorModeValue,
   Button,
-  IconButton,
 } from '@chakra-ui/react';
 
 import NextLink from 'next/link';
@@ -48,11 +46,7 @@ export default function RecentPosts({ posts }) {
               </Link>
             </NextLink>
           </Flex>
-          <Flex
-            flex={1}
-            justify={{ base: 'flex-start', md: 'flex-end' }}
-            align={'center'}
-          >
+          <Flex flex={1} justify={'flex-end'} align={'center'}>
             <Text color={dateColor}>
               {dateFormatted(post.frontmatter.date)}
             </Text>
