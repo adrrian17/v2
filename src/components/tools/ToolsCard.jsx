@@ -26,7 +26,7 @@ export default function ToolsCard() {
             p={6}
             direction={'row'}
             align={'center'}
-            justify={'space-between'}
+            justify={'center'}
             borderColor={'brand.400'}
             borderWidth={3}
             borderRadius={'xl'}
@@ -55,7 +55,6 @@ export default function ToolsCard() {
                   </Stack>
                 </LinkOverlay>
               </NextLink>
-              <Text>Las apps y servicios que uso en el día a día.</Text>
             </Stack>
           </Stack>
         </LinkBox>

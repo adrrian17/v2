@@ -26,7 +26,7 @@ export default function ScriptsCard() {
             p={6}
             direction={'row'}
             align={'center'}
-            justify={'space-between'}
+            justify={'center'}
             borderColor={'brand.400'}
             borderWidth={3}
             borderRadius={'xl'}
@@ -52,7 +52,6 @@ export default function ScriptsCard() {
                   </Stack>
                 </LinkOverlay>
               </NextLink>
-              <Text>Algunos de los guiones de cómic que he escrito.</Text>
             </Stack>
           </Stack>
         </LinkBox>
