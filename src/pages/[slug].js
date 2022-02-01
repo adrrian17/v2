@@ -31,7 +31,7 @@ export default function PostPage({ frontmatter, content }) {
         description={frontmatter.description}
         openGraph={defaultSEO.openGraph}
       />
-      <Container maxW={'container.md'} my={20}>
+      <Container maxW={'container.sm'} my={20}>
         <Button
           mb={12}
           size={'lg'}
