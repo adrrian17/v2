@@ -33,21 +33,8 @@ export default function RecentPosts({ posts }) {
         <Box rounded={'full'} h={'3px'} bg={'brand.400'} w={'50%'} />
       </Stack>
       {posts.map((post) => (
-        <Flex
-          key={post.slug}
-          direction={{ base: 'column-reverse', md: 'row' }}
-          my={4}
-        >
-          <Flex
-            flex={1}
-            justify={{ base: 'flex-start', md: 'flex-start' }}
-            align={'center'}
-          >
-            <Text color={dateColor}>
-              {dateFormatted(post.frontmatter.date)}
-            </Text>
-          </Flex>
-          <Flex flex={2} ml={{ base: 0, md: -12 }}>
+        <Flex key={post.slug} direction={{ base: 'column', md: 'row' }} my={4}>
+          <Flex flex={2} ml={{ base: 0 }}>
             <NextLink href={`/${post.slug}`} passHref>
               <Link
                 fontSize={'lg'}
@@ -60,6 +47,15 @@ export default function RecentPosts({ posts }) {
                 {post.frontmatter.title}
               </Link>
             </NextLink>
+          </Flex>
+          <Flex
+            flex={1}
+            justify={{ base: 'flex-start', md: 'flex-end' }}
+            align={'center'}
+          >
+            <Text color={dateColor}>
+              {dateFormatted(post.frontmatter.date)}
+            </Text>
           </Flex>
         </Flex>
       ))}
