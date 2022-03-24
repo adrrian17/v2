@@ -1,41 +1,46 @@
 .post p {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
-  line-height: 1.8;
-  font-family: 'Merriweather', serif;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 1.25rem;
+	line-height: 1.8;
+	font-family: 'Merriweather', serif;
 }
 
 .post blockquote {
-  font-style: italic;
-  border-left: 4px solid #094cdc;
-  padding-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  line-height: 1.8;
- }
+	font-style: italic;
+	border-left: 4px solid #094cdc;
+	padding-left: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+	line-height: 1.8;
+}
 
 .post blockquote > p {
-  padding-top: 0;
-  padding-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .post a {
-  color: #1A202C;
-  font-weight: bold;
-  text-decoration: underline 2px #094cdc;
+	color: #1a202c;
+	font-weight: bold;
+	text-decoration: underline 2px #094cdc;
 }
 
 .post a:hover {
-  background: #094cdc;
-  color: white;
-  padding-bottom: 3px;
+	background: #094cdc;
+	color: white;
+	padding-bottom: 3px;
 }
 
+.post ul li a {
+	font-size: 1.25rem;
+	line-height: 1.8;
+	font-family: 'Merriweather', serif;
+}
 
 body.chakra-ui-dark .post a {
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: bold;
-  text-decoration: underline 3px #094cdc;
+	color: rgba(255, 255, 255, 0.92);
+	font-weight: bold;
+	text-decoration: underline 3px #094cdc;
 }
